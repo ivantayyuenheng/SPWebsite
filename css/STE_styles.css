@@ -1,0 +1,220 @@
+@charset "utf-8";
+
+/*
+FED CA2 Assignment
+    Assignment Theme: "Save the Earth"
+
+    Stylesheet for All 4 Website Pages (index.html, earth.html, sgpoly.html, form.html)
+    Author: IVAN TAY YUEN HENG
+    Date: 08/05/2023
+
+    Filename: STF_styles1.css
+*/
+
+/* GENERAL STYLES */
+
+nav, #footer{
+    background-color: #3F6844;
+}
+
+.navbar-nav .nav-link {
+    color: #FAF1CF;
+}
+
+.navbar-nav .nav-link:hover {
+    color: rgb(145, 173, 244);
+}
+
+body {
+    background-color: #172D13;
+}
+
+/* Font Styles */
+@font-face {
+    font-family: Tangerine;
+    src: url('../font/tangerine_Bold.ttf') format('truetype'),
+        url('../font/tangerine-Regular.ttf') format('truetype');
+}
+
+/* Header Styles*/
+header {
+    font-family: Tangerine, sans-serif;
+    text-shadow: 1px 1px 5px black;
+    font-size: 7vw;
+}
+
+header > div{
+    font-size: 3vw;
+}
+
+/* Article and Aside Styles */
+.article p, aside p {
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    font-size: 1.2em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Heading Styles */
+
+.headingstyle {
+    color: white;
+    text-shadow: 1px 1px 5px black;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Header 2, 3, 4 Styles */
+h2, h3, h4 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Unordered List Styles */
+ul li {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+footer ul {
+    padding: 0px;
+}
+
+/* Footer */
+footer ul li {
+    list-style-type: none;
+}
+
+footer .imgsplogo {
+    position: relative;
+    top: -2px;
+    width: 40px;
+}
+
+/* Article Styles for About Me Page*/
+.aboutMeIcons img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: 0.2s;
+}
+
+.aboutMeIcons img:hover {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+}
+
+.intro, #feedbackform {
+    background-color: #FAF1CF;
+}
+
+.aboutMeHeading {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.aboutMeHeading::first-letter {
+    font-size: 2em;
+}
+
+/* Figure Styles for About Me Page */
+.contactMeIcon {
+    width: 25%;
+    height: auto;
+}
+
+#Values {
+    margin-top: 200px;
+}
+
+#valueAccordion {
+    width: 95%;
+    margin-bottom: 210px;
+}
+
+/* Accordion Styles */
+.accordion .accordion-item .accordion-button {
+    background-color: #202838;
+}
+
+.accordion {
+    --bs-accordion-border-width: 0px;
+    --bs-accordion-inner-border-radius: 0px;
+    --bs-accordion-btn-focus-box-shadow: none;
+}
+
+.accordion-button::after {
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: #202838;
+}
+
+.accordion-body {
+    background-color: #535c6b;
+}
+
+#Personality {
+    margin-top: 250px;
+}
+
+#carouselPersonality img {
+    object-fit: cover;
+    filter: brightness(55%);
+    width: 90%;
+    height: 90%;
+}
+
+.personalitytext::first-letter {
+    font-size: 2em;
+}
+
+/* Save The Earth Styles */
+figure.Earth img {
+    height: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+    filter: brightness(80%);
+}
+
+.card img {
+    height: 450px;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.howto {
+    background-color: #2a472d;
+}
+
+.steArticletext {
+    background-color: #FAF1CF;
+    overflow: hidden;
+}
+
+.imgTrees {
+    filter: brightness(80%);
+}
+
+/*Singapore Polytechnic Styles*/
+#sgheading header {
+    z-index: 2;
+}
+#sgheading img {
+    filter: brightness(80%);
+}
+
+.sgPolyPhoto {
+    width: 100%;
+
+}
+
+.sgPolyLink img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#carouselCommunity img {
+    filter: brightness(60%);
+}

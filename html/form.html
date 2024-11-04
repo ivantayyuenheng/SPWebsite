@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link the CDN css files here -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 
+        FED CA2 Assignment
+        Assignment Theme: "Save the Earth"
+
+        Feeback Form Page
+        Author: IVAN TAY YUEN HENG
+        Date: 08/06/2023
+
+        Filename: form.html
+    -->
+
+    <!-- Title -->
+    <title>CA2 - Interactive Website </title>
+
+    <!-- CSS Link -->
+    <link href="../css/STE_styles.css" rel="stylesheet">
+
+    <!-- JavaScript Link -->
+    <script src="../js/clock.js" defer></script>
+    <script src="../js/formvalidator.js" defer></script>
+
+</head>
+
+<body class="w-100 m-0">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top p-3 mt-0 text-align-center position-fixed">
+        <div class="container-fluid">
+            <a class="navbar-brand"> <img src="../graphics_files/logo.png" alt="logo"> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-list-ul"
+                        viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                    </svg>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div>
+                    <ul class="navbar-nav lh-lg fw-bold">
+
+                        <!-- About Me Navigation -->
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fs-5" aria-current="page" href="index.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                                    class="bi bi-person-circle" viewBox="0 1 16 16">
+                                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                                    <path fill-rule="evenodd"
+                                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                                </svg>
+                                About Me</a>
+                        </li>
+
+                        <!-- Save The Earth Navigation -->
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fs-5" href="earth.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                                    class="bi bi-tree-fill" viewBox="0 1 16 16">
+                                    <path
+                                        d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z" />
+                                </svg>
+                                Save The Earth</a>
+                        </li>
+
+                        <!-- Singapore Polytechnic Navigation -->
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fs-5" href="sgpoly.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                                    class="bi bi-book-fill" viewBox="0 1 16 16">
+                                    <path
+                                        d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                                </svg>
+                                Singapore Polytechnic</a>
+
+                            <!-- Form Navigation -->
+                        <li class="nav-item mx-3">
+                            <a class="nav-link fs-5" href="form.html">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                                    class="bi bi-chat-left-text-fill" viewBox="0 1 16 16">
+                                    <path
+                                        d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                                </svg>
+                                Feedback</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Feedback Heading -->
+    <div class="position-relative my-5">
+        <header class="text-light fs-sm-5 fw-bolder position-absolute top-50 start-50 translate-middle text-center">
+            Feedback
+            <div id="clock" class="mt-5"></div>
+        </header>
+        <img class="vw-100 img-fluid" src="../graphics_files/header4.jpg" alt="header 4">
+    </div>
+
+    <!-- Content -->
+    <div class="container my-5 ">
+        <div class="row">
+
+            <!-- Feedback Title and Text -->
+            <div class="justify-content-center col-lg-4 col-md-12 text-lg-start text-md-center text-white my-5 px-5">
+                <h2 class="display-3 my-5">Your Feedback Matters!</h2>
+
+                <p class="fs-5">
+                    Please complete a brief feedback form letting me know me about your experience. Your insightful
+                    feedback will help me develop my website and deliver a better experience in the future! It was a
+                    pleasure to have your time and input. Thank you for visiting my web page,
+                    and I wish you an enjoyable and wonderful day! </p>
+            </div>
+
+            <div id="feedbackform" class="col-lg-8 col-md-12 border rounded-5 px-5">
+
+                <!-- Form -->
+                <form class="needs-validation" novalidate>
+                    <div class="m-4 border-bottom border-3 border-dark ">
+
+                        <!-- Contact Details -->
+                        <h2 class="fw-bold text-decoration-underline display-5"> Contact Details </h2>
+
+                        <div class="row">
+
+                            <!-- Selection -->
+                            <div class="form-group col-md-2 col-sm-12 my-3">
+                                <label for="inputState" class="form-label fs-5">Title</label>
+                                <select id="inputState" class="form-select" aria-label="Choose your title">
+                                    <option value="1">Mr.</option>
+                                    <option value="2">Mrs.</option>
+                                    <option value="3">Miss</option>
+                                    <option value="4">Ms.</option>
+                                    <option value="5">Dr.</option>
+                                    <option value="6">Prof.</option>
+                                </select>
+                            </div>
+
+                            <!-- Ask user to input their username -->
+                            <div class="form-group col-md-10 col-sm-12 fs-5 my-3">
+                                <label for="username" class="form-label">Username:</label>
+                                <input class=" form-control" type="text" id="username" placeholder="John Doe"
+                                    name="username" required>
+                                <div class="invalid-feedback">
+                                    Please enter your name.
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Ask user to input their email -->
+                        <div class="form-group my-3">
+                            <div class="row">
+                                <div class="form-group col-md-7 col-sm-12 my-3">
+                                    <label for="emailinput" class="form-label fs-5 ">Email address:</label>
+
+                                    <input class="form-control" name="emailinput" type="email" id="emailinput"
+                                        placeholder="123@gmail.com" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your email.
+                                    </div>
+                                </div>
+
+                                <!-- Ask user to input their phone number in the correct pattern -->
+                                <div class="form-group col-md-5 col-sm-12 my-3">
+                                    <label for="phone" class="form-label fs-5 ">Phone number (SG): </label>
+
+                                    <input class="form-control" type="tel" name="phone" id="phone"
+                                        placeholder="12344567" pattern="[0-9]{4}[0-9]{4}" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your password or enter the right pattern.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ask user to input their address (optional) -->
+                        <div class="form-group col-12 mb-5 my-3">
+                            <label for="address" class="form-label fs-5 ">Address: (optional)</label>
+
+                            <input class="form-control" name="address" type="text" id="address"
+                                placeholder="500 Dover Rd, Singapore 139651">
+                        </div>
+
+                    </div>
+
+                    <div class="m-4">
+
+                        <!-- Feedback Form -->
+                        <h2 class="fw-bold text-decoration-underline display-5"> Feedback Form </h2>
+
+                        <div class="my-5">
+
+
+                            <!-- Ask user to choose their satisfaction based using the range slider -->
+                            <h3 class="fs-4 my-5 mb-4">Overall, how do you think of the website? </h3>
+
+                            <div class="row text-center">
+                                <div class="col-1"> </div>
+                                <div class="col-2 text-break">
+                                    <img class="img-fluid" src="../graphics_files/angry.png"
+                                        alt="Highly Disatisfied"><br>
+                                    Highly Disatisfied
+                                </div>
+                                <div class="col-2 text-break">
+                                    <img class="img-fluid" src="../graphics_files/sad.png" alt="Disatisfied"><br>
+                                    Disatisfied
+                                </div>
+                                <div class="col-2 text-break">
+                                    <img class="img-fluid" src="../graphics_files/neutral.png" alt="Neutral"><br>
+
+                                    Neutral
+                                </div>
+
+                                <div class="col-2 text-break">
+                                    <img class="img-fluid" src="../graphics_files/happy.png" alt="Satisfied"><br>
+                                    Satisfied
+                                </div>
+                                <div class="col-2 text-break">
+                                    <img class="img-fluid" src="../graphics_files/starSmile.png"
+                                        alt="highly satisfied"><br>
+                                    Highly Satisfied
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-1"> </div>
+                                <div class="col-10">
+                                    <input type="range" class="form-range" min="0" max="4" id="rangeOpinion">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ask the user their opinions with checkbox and textarea (optional) -->
+                        <div class="row my-5">
+                            <div class="col-md-6 col-sm-12 fs-5 gx-5">
+                                <h3 class="fs-4 mb-4 text-decoration-underline"> (Optional) Save The Earth Website
+                                    Opinion:</h3>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="UIcheckbox1">
+                                    <label class="form-check-label" for="UIcheckbox1">
+                                        The website allow me to understand who is its author and designer.
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="UIcheckbox2">
+                                    <label class="form-check-label" for="UIcheckbox2">
+                                        The website teaches me the methods of saving the Earth.
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="UIcheckbox3">
+                                    <label class="form-check-label" for="UIcheckbox3">
+                                        The website explains Singapore Polytechnic's sustainability contributions.
+                                    </label>
+                                </div>
+
+                                <div class="my-5 fs-5 fw-bold">
+                                    <label for="opinionSTE1" class="form-label"> If you did not select any. Could you
+                                        please explain why?</label>
+                                    <textarea class="form-control" id="opinionSTE1" rows="3"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Ask the user their criticisms with checkbox and textarea (optional) -->
+                            <div class="col-md-6 col-sm-12 fs-5 gx-5">
+                                <h3 class="fs-4 mb-4 text-decoration-underline"> (Optional) Save The Earth Website
+                                    Criticism:</h3>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="UIcheckbox4">
+                                    <label class="form-check-label" for="UIcheckbox4">
+                                        The webite is very unorganised and messy.
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="UIcheckbox5">
+                                    <label class="form-check-label" for="UIcheckbox5">
+                                        The website is not user friendly and is very hard to navigate.
+                                    </label>
+                                </div>
+
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="" id="UIcheckbox6">
+                                    <label class="form-check-label" for="UIcheckbox6">
+                                        The website words are too small or too big.
+                                    </label>
+                                </div>
+
+                                <div class="my-5 fs-5 fw-bold">
+                                    <label for="opinionSTE2" class="form-label"> If you choose any of the
+                                        selection or have any other criticism. Could you please explain
+                                        why?</label>
+                                    <textarea class="form-control" id="opinionSTE2" rows="3"></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Create a table and ask the user to choose an option using radio buttons -->
+                        <div class="row col-md-12 text-dark text-center my-5 table-responsive mx-auto form-check">
+                            <table class="table table-striped caption-top justify-content-center fs-5 ">
+
+                                <thead>
+                                    <tr class="border-bottom border-3 border-dark ">
+                                        <th scope="col"> </th>
+                                        <th scope="col"> Very unlikely </th>
+                                        <th scope="col"> Unlikely </th>
+                                        <th scope="col"> Somewhat likely </th>
+                                        <th scope="col"> Likely </th>
+                                        <th scope="col"> Extremely likely </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <th scope="row">
+                                            The author understands the website's objective </th>
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorWebsite"
+                                                    id="veryunlikely1" required>
+                                                <div class=" invalid-feedback">
+                                                    Pick 1
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorWebsite"
+                                                    id="unlikely1" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorWebsite"
+                                                    id="somewhatlikely1" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorWebsite"
+                                                    id="likely1" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorWebsite"
+                                                    id="verylikely1" required>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"> The author's message is clear </th>
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorMessage"
+                                                    id="veryunlikely2" required>
+                                                <div class=" invalid-feedback">
+                                                    Pick 1
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorMessage"
+                                                    id="unlikely2">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorMessage"
+                                                    id="somewhatlikely2">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorMessage"
+                                                    id="likely2">
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorMessage"
+                                                    id="verylikely2">
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"> The author shifted my perspective
+                                        </th>
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorPerspective"
+                                                    id="veryunlikely3" required>
+                                                <div class=" invalid-feedback">
+                                                    Pick 1
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorPerspective"
+                                                    id="unlikely3" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorPerspective"
+                                                    id="somewhatlikely3" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorPerspective"
+                                                    id="likely3" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="authorPerspective"
+                                                    id="verylikely3" required>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"> I would recommend this website </th>
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="recommend"
+                                                    id="veryunlikely4" required>
+                                                <div class=" invalid-feedback">
+                                                    Pick 1
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="recommend"
+                                                    id="unlikely4" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="recommend"
+                                                    id="somewhatlikely4" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="recommend"
+                                                    id="likely4" required>
+                                            </div>
+                                        </td>
+
+                                        <td>
+                                            <div class="form-check d-flex justify-content-center">
+                                                <input class="form-check-input" type="radio" name="recommend"
+                                                    id="verylikely4" required>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Ask users for additional feedback -->
+                        <div class="mb-5">
+                            <label for="additionalFeedback" class="form-label fw-bolder fs-2">
+                                Additional Feedback:
+                            </label>
+                            <textarea class="form-control" id="additionalFeedback" rows="5" required></textarea>
+                            <div class="invalid-feedback">
+                                Please write a feedback.
+                            </div>
+                        </div>
+
+                        <!-- Ask user to acknowledge by pressing the switch. If acknowledgment is not pressed, they can not submit. -->
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="acknowledgment" required>
+                            <label class="form-check-label fs-5" for="acknowledgment"> I acknowledge that the feedback I
+                                have provided reflects solely my personal opinions and is free from any biases or
+                                external influences. </label>
+                            <div class="invalid-feedback">
+                                Please acknowledge this.
+                            </div>
+                        </div>
+
+                        <div class="d-grid gap-4 -6 my-5 text-center">
+                            <!-- Reset Buttons -->
+                            <button class="btn btn-warning btn-lg" type="reset">Reset</button>
+                            <!-- Submit Buttons -->
+                            <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer" class="mt-5 pt-5">
+        <div class="container mt-5">
+            <footer class="row border-top mt-5 py-5 text-white">
+
+                <div class="col-lg-3 col-md-4 mb-5">
+                    <img class="img-fluid" src="../graphics_files/logo.png" alt="logo">
+                    <br>
+                    <div class="mt-2">
+
+                        IVAN TAY YUEN HENG 2335133
+
+                    </div>
+                </div>
+
+                <div class="d-none d-lg-block col-lg-3">
+
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-5">
+                    <h5 class="fs-4 mb-4"><img class="imgsplogo img-fluid rounded-circle"
+                            src="../graphics_files/sgpolylogo.jpg" alt="sgpolylogo"> Singapore Poly </h5>
+                    <ul>
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none" href="https://www.sp.edu.sg/">
+                                Website </a></li>
+                        <!-- Link to Singapore Polytechnic Main Website-->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters"> Sustanability
+                                Website </a></li>
+                        <!-- Link to Singapore Polytechnic Sustainability website which is located in Singapore Polytechnnic Website-->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://www.sp.edu.sg/sp/about-sp/contact-us"> Contact Them </a></li>
+                        <!-- Link to Contact List in Singapore Polytechnic website which is located in Singapore Polytechnic Website-->
+                    </ul>
+                </div>
+
+
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fs-4 mb-4"><img class="imgsplogo img-fluid rounded-circle"
+                            src="../graphics_files/stelogo.jpg" alt="stelogo"> Save The Earth </h5>
+                    <ul>
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://www.greenplan.gov.sg/"> Singapore Green Plan 2030 </a></li>
+                        <!-- Link to Singapore Green Plan Website-->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://oceanservice.noaa.gov/ocean/earthday.html"> Protect Our Planet </a></li>
+                        <!-- Link to National Ocean Service Website (Ten Simple choices for a healthier planet) -->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none" href="https://www.cgs.gov.sg/">
+                                Clean & Green </a></li>
+                        <!-- Link to Clean and Green Singapore -->
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>

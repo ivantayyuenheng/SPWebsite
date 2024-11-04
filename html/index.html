@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link the CDN css files here -->
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- 
+        FED CA2 Assignment
+        Assignment Theme: "Save the Earth"
+
+        About Me Page
+        Author: IVAN TAY YUEN HENG
+        Date: 08/06/2023
+
+        Filename: index.html
+    -->
+
+    <!-- Title -->
+    <title> CA2 - Interactive Website  </title>
+
+    <!-- CSS Link -->
+    <link href="../css/STE_styles.css" rel="stylesheet">
+
+  <!-- JavaScript Link -->
+  <script src="../js/clock.js" defer></script>
+  <script src="../js/workouttable.js" defer></script>
+  
+    
+
+
+
+
+</head>
+
+
+<!-- Body -->
+
+<body class = "w-100 m-0">
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top p-3 mt-0 text-align-center position-fixed">
+    <div class="container-fluid">
+      <a class="navbar-brand"> <img src="../graphics_files/logo.png" alt="logo"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-list-ul"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+          </svg>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div>
+          <ul class="navbar-nav lh-lg fw-bold">
+
+            <!-- About Me Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" aria-current="page" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-person-circle" viewBox="0 1 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+                About Me</a>
+            </li>
+
+            <!-- Save The Earth Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" href="earth.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-tree-fill" viewBox="0 1 16 16">
+                  <path
+                    d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z" />
+                </svg>
+                Save The Earth</a>
+            </li>
+
+            <!-- Singapore Polytechnic Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" href="sgpoly.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-book-fill" viewBox="0 1 16 16">
+                  <path
+                    d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+                Singapore Polytechnic</a>
+
+              <!-- Form Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" href="form.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-chat-left-text-fill" viewBox="0 1 16 16">
+                  <path
+                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                </svg>
+                Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+    <!-- About Me Header -->
+
+    <div class="position-relative my-5">
+       
+        <header class="text-light fw-bolder position-absolute top-50 start-50 translate-middle text-center">
+            About Me 
+            <div id = "clock" class = "mt-5"></div> 
+        </header>
+        
+        <img class="vw-100 img-fluid" src="../graphics_files/header1.jpg" alt="header 1">
+    </div>
+
+
+
+    <!-- About Me 4 Icons -->
+
+    
+    <div class="aboutMeIcons container-fluid text-center mt-5">
+        <div class="row">
+            
+            <!-- About Me -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <a href="#Introduction">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded-circle" src="../graphics_files/aboutmeicon1.jpg" alt="aboutMeIcon1">
+                        <!-- Source of image is from my photo gallery when I took a selfie.-->
+                        <figcaption class="figcaption text-center text-white text-bold fs-5 fw-bold">
+                            About Me
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <!--My Values -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <a href="#Values">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded-circle" src="../graphics_files/aboutmeicon3.jpg" alt="aboutMeIcon3">
+                        <figcaption class="figcaption text-center text-white text-bold fs-5 fw-bold">
+                            My Values
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <!-- My Interest -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <a href="#Interest">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded-circle" src="../graphics_files/aboutmeicon2.jpg" alt="aboutMeIcon2">
+                        <figcaption class="figcaption text-center text-white text-bold fs-5 fw-bold">
+                            My Interest
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+
+            <!-- My Personality -->
+            <div class="col-lg-3 col-md-6 col-sm-12 mb-5">
+                <a href="#Personality">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid rounded-circle" src="../graphics_files/aboutmeicon4.jpg" alt="aboutMeIcon4">
+                        <figcaption class="figcaption text-center text-white text-bold fs-5 fw-bold">
+                            My Personality
+                        </figcaption>
+                    </figure>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Heading -->
+
+    <div class="headingstyle my-5 display-1 text-center"> Closer Look of My Life </div>
+
+    <!-- 4 Images direct to the Introduction, Interest, Values, Personality-->
+
+    <!-- Introduction -->
+
+    <div class="intro">
+        <div id="Introduction" class="vw-100  container mb-5">
+            <div class="row">
+
+                <!-- Image for large devices -->
+                <div class="d-none d-lg-block col-lg-6 text-center position-relative">
+                    <img class="img-fluid position-absolute top-50 start-50 translate-middle border border-5 border-white w-50"
+                    src="../graphics_files/introPic1.jpg" alt="Introduction Picture">
+                    <!-- Source of image is from my photo gallery when I took a photo in South Korea, Busan.-->
+                </div>
+
+                <!-- Image for medium and small devices -->
+                <div class="d-block d-lg-none col-sm-12 my-2">
+                    <figure class="figure">
+                        <img class=" figure-img img-fluid border border-5 border-white" src="../graphics_files/familyphoto.jpg"
+                            alt="Family Photo">
+                            <!-- Source of image is from my photo gallery when I took a photo in the Korea airport in the airplane with my family -->
+
+                        <figcaption class="text-start figcaption "> - Photo with my family </figcaption>
+                    </figure>
+                </div>
+
+                
+                <div class=" col-lg-6 col-md-12 text-center">
+                    <h2 class="aboutMeHeading col-lg-12 text-dark my-5 text-break text-decoration-underline display-3 fw-bold"> INTRODUCTION </h2>
+                    <div class="row">
+
+                        <!-- Introduction text -->
+                        <div class="article introductiontext col-md-8 text-dark pb-5">
+                            <p> Hello! My name is Ivan Tay Yuen Heng, and I am a Singapore Polytechnic Diploma in
+                                Applied
+                                Artificial
+                                Intelligence and Analytics student.
+                                I am currently 18 years old and live near Redhill MRT Station. </p>
+                            <p> A fun fact about myself is that my ethnicity is Malaysian, and I am from Kuching,
+                                Sarawak.
+                                Not only that, I was fascinated by computing, especially artificial intelligence and
+                                data
+                                analytics
+                                specifications. </p>
+                            <p> Due to the recognition of Singapore Polytechnic and they offers courses that I am very
+                                interested in,
+                                I chose to have my education here. </p>
+                            </div>
+
+                        <!-- Contact Me -->
+                        <div class="row col-md-4 text-dark text-center mb-5">
+                            <h4 class="mb-2 fw-bolder mb-3"> Contact Me! </h4>
+
+                            <!-- Contact Me Icons -->
+                            <div class=" col-md-12 col-sm-4">
+                            
+                                <a class=" text-dark fs-5 text-decoration-none"
+                                    href="mailto:ivantay43.23@ichat.sp.edu.sg">
+                                    <img class="contactMeIcon img-fluid" src="../graphics_files/outlookicon.png"
+                                        alt="Outlook Icon">
+                                    <div> Outlook </div>
+                                </a>
+                            </div>
+
+                            <div class="col-md-12 col-sm-4">
+                                <a class=" text-dark fs-5 text-decoration-none"
+                                    href="https://www.instagram.com/ivantay20/">
+                                    <img class="contactMeIcon img-fluid" src="../graphics_files/instaicon.png"
+                                        alt="Instagram Icon">
+                                    <div> Instagram </div>
+                                </a>
+                            </div>
+
+                            <div class="col-md-12 col-sm-4">
+                                <a class=" text-dark fs-5 text-decoration-none" href="https://discord.com/">
+                                    <img class="contactMeIcon img-fluid" src="../graphics_files/discordicon.png"
+                                        alt="Discord Icon">
+                                    <div> Discord </div>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Values -->
+    <h2 id="Values" class="aboutMeHeading col-lg-12 text-white text-break text-center fw-bold display-3 text-decoration-underline"> VALUES </h2>
+
+    <div>
+        <p class="text-light fs-3 text-center mx-5">
+            Values are extremely significant in my life. It teaches me how to grow and treat others with respect and
+            integrity. Personally, I believed that there are three values
+            which I have and hold great importance in my life! Those are:
+        </p>
+    </div>
+
+    <!-- Values Accordion -->
+    <div id="valueAccordion" class="container-fluid mt-5">
+        <div class="accordion" id="accordionValues">
+
+            
+            <div class="accordion-item">
+            
+                <!-- Accordion Kindness -->
+                <h2 class="accordion-header pb-0 text-decoration-none ">
+                    <button class="accordion-button fs-1 text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseKind" aria-expanded="true" aria-controls="collapseKind">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-person-heart mx-3" viewBox="0 0 16 16">
+                            <path
+                                d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z" />
+                        </svg>
+                        Kindness
+                    </button>
+                </h2>
+
+                <!-- Kindness text -->
+                <div id="collapseKind" class="accordion-collapse collapse show" data-bs-parent="accordionValues">
+                    <div class="accordion-body text-white">
+                        <div class="row">
+
+                            <div class="col-lg-2 col-md-12 text-center fw-bolder display-1 my-5">
+                                1.
+                            </div>
+
+                            <div class="col-lg-5 col-md-6 col-sm-12 p-5">
+                                <p class="p-3 fs-3"> I found myself having a high value towards kindness. Kindness make
+                                    the world a better place for
+                                    everyone. It teaches me to leave hate and learn how to love instead.
+                                    A quote also leave a huge remark towards me,
+                                </p>
+
+                                <br>
+
+                                <figure>
+                                    <blockquote class="blockquote fw-bold fs-2 text-center"> “Be kind whenever possible.
+                                        It is always possible.”
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer text-white fs-5 text-center"> Dalai Lama,
+                                        spiritual leader of Tibetan
+                                        Buddhism</figcaption>
+                                </figure>
+
+                            </div>
+
+                            <div class="col-lg-5 col-md-6 col-sm-12 my-5 text-center">
+                                <img class="img-fluid" src="../graphics_files/kindnessimg.jpg" alt="kindImg">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Accordion Honesty -->
+                <h2 class="accordion-header pb-0 text-decoration-none">
+                    <button class="accordion-button fs-1 text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseHonest" aria-expanded="true" aria-controls="collapseHonest">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-emoji-smile-fill mx-3" viewBox="0 0 16 16">
+                            <path
+                                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zM4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8z" />
+                        </svg>
+                        Honesty
+                    </button>
+                </h2>
+
+                <!-- Honesty text -->
+                <div id="collapseHonest" class="accordion-collapse collapse" data-bs-parent="accordionValues">
+                    <div class="accordion-body text-white">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-12 text-center fw-bolder display-1 my-5">
+                                2.
+                            </div>
+
+                            <div class="col-lg-5 col-md-6 col-sm-12 p-5">
+                                <p class="p-3 fs-3"> Honesty took on many meanings for me.
+                                    For me, being honest entails not only telling the truth but also striving to perform
+                                    the correct action.
+                                    I truly feel that if one is honest, there will be no deception or cheating, and we
+                                    could be trustworthy, reliable, loyal, and sincere.
+                                </p>
+
+                                <br>
+
+                                <figure>
+                                    <blockquote class="blockquote fw-bold fs-2 text-center"> “Honesty is always the best
+                                        policy.”
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer text-white fs-5 text-center"> George Washington
+                                    </figcaption>
+                                </figure>
+
+                            </div>
+
+                            <div class="col-lg-5 col-md-6 col-sm-12 my-5 text-center">
+                                <img class="img-fluid" src="../graphics_files/honestimg.jpg" alt="honestImg">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Accordion Compassion -->
+                <h2 class="accordion-header pb-0 text-decoration-none">
+                    <button class="accordion-button fs-1 text-white" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseCompassion" aria-expanded="true" aria-controls="collapseCompassion">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            class="bi bi-people-fill mx-3" viewBox="0 0 16 16">
+                            <path
+                                d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                        </svg>
+                        Compassion
+                    </button>
+                </h2>
+
+                <!-- Compassion Text -->
+                <div id="collapseCompassion" class="accordion-collapse collapse" data-bs-parent="accordionValues">
+                    <div class="accordion-body text-white">
+                        <div class="row">
+                            <div class="col-lg-2 col-md-12 text-center fw-bolder display-1 my-5">
+                                3.
+                            </div>
+
+                            <div class="col-lg-5 col-md-6 col-sm-12 p-5">
+                                <p class="p-3 fs-3">
+                                    Compassion is the glue that holds our society together.
+                                    I constantly trusted that compassion brings people together and allows us to help
+                                    those who are in need.
+                                    Compassion is one of the core principles that I have always had, as seen by simple
+                                    actions such as donating to charity in my spare time.
+                                </p>
+
+                                <br>
+
+                                <figure>
+                                    <blockquote class="blockquote fw-bold fs-2 text-center "> “Compassion is the wish to
+                                        see others free from suffering”
+                                    </blockquote>
+                                    <figcaption class="blockquote-footer text-white fs-5 text-center"> Dalai Lama XIV
+                                    </figcaption>
+                                </figure>
+
+                            </div>
+
+                            <div class="col-lg-5 col-md-6 col-sm-12 my-5 text-center">
+                                <img class="img-fluid" src="../graphics_files/compassionimg.jpeg" alt="compassionImg">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- Interest -->
+    <div class="intro my-5">
+
+        <div id="Interest" class="vw-100 container mb-5">
+            <div class="row">
+
+                <!-- Image for medium and small devices -->
+                <div class="d-block d-lg-none col-sm-12 my-2">
+                    <figure class="figure">
+                        <img class="figure-img img-fluid border border-5 border-white" src="../graphics_files/gym.jpg"
+                            alt="Gym Photo">
+                        <!-- Source of image is from my photo gallery when I took a photo in the gym in Artra, Alexandra View.-->                        
+                        <figcaption class="text-start figcaption"> - Overview of my favourite gym </figcaption>
+                    </figure>
+                </div>
+
+                
+                <div class=" col-lg-6 col-md-12 text-center">
+                    <h2 class="aboutMeHeading col-lg-12 text-dark my-5 text-break fw-bold display-3 text-decoration-underline"> INTEREST </h2>
+                    <div class="row">
+
+                        <!-- Interest Text -->
+                        <div class="article introductiontext col-md-12 text-dark">
+                            <p> I have been interested in working out or bodybuilding since I was 14 years old. The
+                                reason
+                                behind was
+                                that I
+                                used to be fat shame by most of my classmates and was considered unhealthy and
+                                unfit. </p>
+                            <p> However, my mum who frequently work out and exercise inspired me to try it out.
+                                Finally, I can find many friends there and able to achieve the body I desire! </p>
+                            <p> I'm now following a "5 Day Classic Bodybuilder Split" workout plan.
+                                This is to improve my muscular development while also achieving the physique goals
+                                that I most seek.
+                                My favourite exercise and movement can be seen in the table below. Please take a
+                                look! </p>
+                            </div>
+
+                        <!-- Interest Workout Table -->
+                        <div id = "workout" class="row col-md-12 text-dark text-center my-5 table-responsive mx-auto"> </div>
+                    </div>
+                </div>
+
+                <!-- Image for large devices -->
+                <div class="d-none d-lg-block col-lg-6 text-center position-relative">
+
+                    <img
+                        class=" img-fluid position-absolute top-50 start-50 translate-middle border border-5 border-white w-50"
+                        src="../graphics_files/introPic2.png" alt="Interest Picture">
+                    <!-- Source of image is from my photo gallery when I took a photo in ILift Studio, in Kuching, Sarawak.-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Personality -->
+
+
+    <!-- Carousel display information for middle and large devices only -->
+    <h2 id="Personality" class="aboutMeHeading col-lg-12 text-white text-break display-3 fw-bold text-decoration-underline text-center"> PERSONALITY </h2>
+
+    <div id="carouselPersonality" class="carousel slide carousel-fades gx-5 my-5 text-center" data-ride="carousel">
+
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselPersonality" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselPersonality" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselPersonality" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselPersonality" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselPersonality" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselPersonality" data-bs-slide-to="5"
+                aria-label="Slide 6"></button>
+
+
+        </div>
+
+        <!-- Carousel Inner -->
+        <div class="carousel-inner ">
+
+            <!-- ESTJ-T -->
+            <div class="carousel-item active">
+                <img class="img-fluid" src="../graphics_files/personalityimg.png" alt="Personality">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="display-3">Personality Test</h4>
+                    <p class="fs-3">By doing a personality test, I realised I am a <strong> "ESTJ-T" </strong>.</p>
+                </div>
+
+                <div class="carousel-caption d-sm-block d-md-none">
+                    <h4 class="display-3">ESTJ-T</h4>
+                </div>
+            </div>
+
+            <!-- Extrovert -->
+            <div class="carousel-item">
+                <img class="img-fluid" src="../graphics_files/extravert.jpg" alt="Extrovert">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="display-3">Extrovert</h4>
+                    <p class="fs-3">E stands for
+                        <strong>E</strong>xtraverted and shows that I love sharing my enthusiasm with friends and love
+                        social
+                        interaction too!
+                    </p>
+                </div>
+
+                <div class="carousel-caption d-sm-block d-md-none">
+                    <h4 class="display-3">Extrovert</h4>
+
+                </div>
+            </div>
+
+            <!-- Observant -->
+            <div class="carousel-item">
+                <img class="img-fluid" src="../graphics_files/observe.jpg" alt="Observant">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="display-3">Observant</h4>
+                    <p class="fs-3">
+                        S stands for ob<strong>S</strong>ervant whichs shows that I am often trying to give action
+                        rather than
+                        thoughts and talk. I also tend to see things less complicated and more direct.
+                    </p>
+                </div>
+                <div class="carousel-caption d-sm-block d-md-none">
+                    <h4 class="display-3">Observant</h4>
+                </div>
+            </div>
+
+            <!-- Thinking -->
+            <div class="carousel-item">
+                <img class="img-fluid" src="../graphics_files/think.jpg" alt="Thinking">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="display-3">Thinking</h4>
+                    <p class="fs-3">
+                        T stands for <strong>T</strong>hinking. This indicates that I emphasis thinking objectively and
+                        rationality
+                        rather than talking through emotions. I also believed knowledge is the key of solving multiple
+                        problems
+                        too.
+                    </p>
+                </div>
+                <div class="carousel-caption d-sm-block d-md-none">
+                    <h4 class="display-3">Thinking</h4>
+                </div>
+            </div>
+
+            <!-- Judging -->
+            <div class="carousel-item">
+                <img class="img-fluid" src="../graphics_files/judge.jpg" alt="Judging">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="display-3">Judging</h4>
+                    <p class="fs-3">
+                        J stands for <strong>J</strong>udging. It shows that I am a very organised person and love
+                        making backup
+                        plans and think ahead of time. However, I am also extremely stubborn and not a fan of surpises
+                        too.
+                    </p>
+                </div>
+                <div class="carousel-caption d-sm-block d-md-none">
+                    <h4 class="display-3">Judging</h4>
+                </div>
+            </div>
+
+            <!-- Turbulent -->
+            <div class="carousel-item ">
+                <img class="img-fluid " src="../graphics_files/turbulence.jpg" alt="Turbulence">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4 class="display-3">Turbulent</h4>
+
+                    <p class="fs-3">T stands for <strong>T</strong>urbulent. It shows that I really love achieving great
+                        results and push myself. However, I am very sensitive towards crticism and it can cause me to
+                        think
+                        negatively rather than seeing the positive sides of a problem.
+                    </p>
+                </div>
+                <div class="carousel-caption d-sm-block d-md-none">
+                    <h4 class="display-3">Turbulent</h4>
+                </div>
+            </div>
+
+        <!-- Carousel Buttons -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselPersonality" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselPersonality" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Personality Text for small devices only to replace the carousel caption that got removed-->
+    <div class="article text-white d-sm-block d-md-none p-3">
+        <p class = "fs-2"> By doing a personality test, I realised I am a <strong> "ESTJ-T"</strong>. </p>
+        <br>
+
+        <div>
+            <p class=" personalitytext text-start">
+                E stands for
+                <strong>E</strong>xtraverted and shows that I love sharing my enthusiasm with friends and love social
+                interaction too!
+            </p>
+            <br>
+
+            <p class="personalitytext text-start">
+                S stands for ob<strong>S</strong>ervant whichs shows that I am often trying to give action rather than
+                thoughts and talk. I also tend to see things less complicated and more direct.
+            </p>
+            <br>
+
+            <p class="personalitytext text-start">
+                T stands for <strong>T</strong>hinking. This indicates that I emphasis thinking objectively and
+                rationality
+                rather than talking through emotions. I also believed knowledge is the key of solving multiple problems
+                too.
+            </p>
+            <br>
+
+            <p class=" personalitytext text-start">
+                J stands for <strong>J</strong>udging. It shows that I am a very organised person and love making backup
+                plans and think ahead of time. However, I am also extremely stubborn and not a fan of surpises too.
+            </p>
+            <br>
+
+            <p class="personalitytext text-start">
+                T stands for <strong>T</strong>urbulent. It shows that I really love achieving great
+                results and push myself. However, I am very sensitive towards crticism and it can cause me to think
+                negatively rather than seeing the positive sides of a problem.
+            </p>
+
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <div id="footer" class="mt-5 pt-5">
+        <div class="container mt-5">
+            <footer class="row border-top mt-5 py-5 text-white">
+    
+                <div class="col-lg-3 col-md-4 mb-5">
+                    <img class="img-fluid" src="../graphics_files/logo.png" alt="logo">
+                    <br>
+                    <div class="mt-2">
+    
+                        IVAN TAY YUEN HENG 2335133
+    
+                    </div>
+                </div>
+    
+                <div class="d-none d-lg-block col-lg-3">
+    
+                </div>
+    
+                <div class="col-lg-3 col-md-4 mb-5">
+                    <h5 class="fs-4 mb-4"><img class="imgsplogo img-fluid rounded-circle" src="../graphics_files/sgpolylogo.jpg"
+                            alt="sgpolylogo"> Singapore Poly </h5>
+                    <ul>
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none" href="https://www.sp.edu.sg/">
+                                Website </a></li>
+                        <!-- Link to Singapore Polytechnic Main Website-->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters"> Sustanability
+                                Website </a></li>
+                        <!-- Link to Singapore Polytechnic Sustainability website which is located in Singapore Polytechnnic Website-->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://www.sp.edu.sg/sp/about-sp/contact-us"> Contact Them </a></li>
+                        <!-- Link to Contact List in Singapore Polytechnic website which is located in Singapore Polytechnic Website-->
+                    </ul>
+                </div>
+    
+    
+                <div class="col-lg-3 col-md-4">
+                    <h5 class="fs-4 mb-4"><img class="imgsplogo img-fluid rounded-circle" src="../graphics_files/stelogo.jpg"
+                            alt="stelogo"> Save The Earth </h5>
+                    <ul>
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://www.greenplan.gov.sg/"> Singapore Green Plan 2030 </a></li>
+                        <!-- Link to Singapore Green Plan Website-->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                                href="https://oceanservice.noaa.gov/ocean/earthday.html"> Protect Our Planet </a></li>
+                        <!-- Link to National Ocean Service Website (Ten Simple choices for a healthier planet) -->
+                        <li class="fs-5 mb-2"><a class="text-white text-decoration-none" href="https://www.cgs.gov.sg/">
+                                Clean & Green </a></li>
+                        <!-- Link to Clean and Green Singapore -->
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<!-- End of Page -->

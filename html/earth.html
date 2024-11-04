@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Link the CDN css files here -->
+  <!-- Latest compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 
+        FED CA2 Assignment
+        Assignment Theme: "Save the Earth"
+
+        Save The Earth Page
+        Author: IVAN TAY YUEN HENG
+        Date: 08/06/2023
+
+        Filename: earth.html
+    -->
+
+  <!-- Title -->
+  <title> CA2 – Interactive Website </title>
+
+  <!-- CSS Link -->
+  <link href="../css/STE_styles.css" rel="stylesheet">
+
+  <!-- JavaScript Link -->
+  <script src="../js/clock.js" defer></script>
+  <script src="../js/earthdaycountdown&calendar.js" defer></script>
+
+</head>
+
+<!-- Body -->
+
+<body class="w-100 m-0">
+
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top p-3 mt-0 text-align-center position-fixed">
+    <div class="container-fluid">
+      <a class="navbar-brand"> <img src="../graphics_files/logo.png" alt="logo"> </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-list-ul"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M5 11.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5zm-3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm0 4a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+          </svg>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div>
+          <ul class="navbar-nav lh-lg fw-bold">
+
+            <!-- About Me Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" aria-current="page" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-person-circle" viewBox="0 1 16 16">
+                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+                  <path fill-rule="evenodd"
+                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
+                </svg>
+                About Me</a>
+            </li>
+
+            <!-- Save The Earth Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" href="earth.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-tree-fill" viewBox="0 1 16 16">
+                  <path
+                    d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5z" />
+                </svg>
+                Save The Earth</a>
+            </li>
+
+            <!-- Singapore Polytechnic Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" href="sgpoly.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-book-fill" viewBox="0 1 16 16">
+                  <path
+                    d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg>
+                Singapore Polytechnic</a>
+
+              <!-- Form Navigation -->
+            <li class="nav-item mx-3">
+              <a class="nav-link fs-5" href="form.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" fill="currentColor"
+                  class="bi bi-chat-left-text-fill" viewBox="0 1 16 16">
+                  <path
+                    d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4.414a1 1 0 0 0-.707.293L.854 15.146A.5.5 0 0 1 0 14.793V2zm3.5 1a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1h-9zm0 2.5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5z" />
+                </svg>
+                Feedback</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Save The Earth Header  -->
+  <div class="position-relative my-5">
+    <header class="text-light fs-sm-5 fw-bolder position-absolute top-50 start-50 translate-middle text-center">
+      Save The Earth
+      <div id="clock" class="mt-5"></div>
+    </header>
+    <img class="vw-100 img-fluid" src="../graphics_files/header2.jpg" alt="header 2">
+  </div>
+
+
+  <!-- Earth Heading -->
+
+  <div class="headingstyle my-5 display-1 text-center">
+    Should We Save The Earth?
+  </div>
+
+  <!-- Earth Article -->
+  <div class="text-light container-fluid" id="earth">
+    <div class="row">
+
+      <!-- Figure image for small and medium devices -->
+      <div class="d-lg-none d-md-block col-sm-12 text-center mb-5">
+        <figure class="figure Earth">
+          <img class="figure-img img-fluid justify-content-center" src="../graphics_files/earthimage.jpg"
+            alt="Earth Images">
+          <figcaption class="figcaption fs-5 fw-bold p-2"> Our home planet and our friend, the Moon. </figcaption>
+        </figure>
+      </div>
+
+      <!-- Save the Earth Article -->
+      <div class="article col-lg-4 col-md-6 col-sm-12 mb-5 gx-5">
+
+        <h2 class="fs-1 text-decoration-underline text-light text-center mb-5"> Yes! <strong> WE SHOULD! </strong></h2>
+        <p class="text-md-center">The Earth is approaching its breaking point. Humans have harmed many lands and waters,
+          causing ecosystem concerns such as global warming and climate change.
+          Earth is our only source of living and staying places where life is achievable.
+          <br><br>
+          Not only that, but Earth is the only planet that provides us with food and water to sustain life, and we must
+          take responsibility for caring for our own planet.
+          Furthermore, rather than destroying nature's ecosystem, we must ensure that animals have habitats in which to
+          live.
+          <br><br>
+          Overall, Earth is our planet, and we must accept the duty of ensuring that we take proper care of it.
+        </p>
+      </div>
+
+
+      <!-- Figure image for large devices -->
+      <div class="d-none d-lg-block gx-5 col-lg-3 text-center">
+        <figure class="figure Earth">
+          <img class="position-figure-img img-fluid justify-content-center" src="../graphics_files/earthimage.jpg"
+            alt="Earth Images">
+          <figcaption class="figcaption fs-5 fw-bold p-2"> Our home planet and our friend, the Moon. </figcaption>
+        </figure>
+      </div>
+
+
+
+
+      <!-- Earth Aside -->
+      <aside class="gx-5 col-lg-5 col-md-6 col-sm-12 mb-4">
+        <h2 class="fs-1 text-decoration-underline text-light mb-5 text-center"> Next Earth Day Calendar </h2>
+
+        <!-- Next Earth Day Calendar -->
+        <div class="table-responsive text-white" id="calendar"></div>
+
+        <h2 class="fs-1 text-decoration-underline text-light my-5 text-center"> Next Earth Day Countdown </h2>
+        <div class="row text-center fs-3" id="countdown">
+
+          <!-- Next Earth Day Countdown -->
+          <div class="p-0 col-3"> <span id="dayscountdown"> </span> <br> DAYS </div>
+          <div class="p-0 col-3"> <span id="hrscountdown"> </span> <br> HRS </div>
+          <div class="p-0 col-3"> <span id="minscountdown"></span> <br> MINS </div>
+          <div class="p-0 col-3"> <span id="secscountdown"></span> <br> SECS </div>
+        </div>
+
+      </aside>
+    </div>
+  </div>
+
+  <!-- Sections -->
+  <div class="headingstyle my-5 display-1 text-center">
+    Three Personal Goals to Save The Earth
+  </div>
+
+  <!-- Cards -->
+  <div class="container">
+    <div class="row justify-content-center">
+
+      <!-- Cards for Recycle, Reduce, Reuse -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card mx-auto mb-5 w-75">
+          <img class="card-img-top" src="../graphics_files/stesection1.jpg" alt="3R's">
+          <div class="card-img-overlay h-50">
+            <h4 class="card-title text-light fw-normal fs-2 ">Reduce, Reuse, Recycle </h4>
+          </div>
+          <p class="card-text fs-5 p-2 text-start">
+            Recycle, reduce and reuse may sound like a hassle for many. However, small actions could lead to a big
+            outcome.
+            <br> <br>
+            Click the button to learn more:
+          </p>
+          <a href="#3R" class="d-inline btn btn-info w-50 mb-2 mx-2 fw-bold">Go to 3R's</a>
+        </div>
+      </div>
+
+      <!-- Cards for Planting Trees -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card mx-auto mb-5 w-75">
+          <img class="card-img img-fluid" src="../graphics_files/stesection2.jpg" alt="Plant trees">
+          <!-- Source:https://www.pexels.com/photo/person-holding-a-green-plant-1072824/ from pexels -->
+          <div class="card-img-overlay h-50">
+            <h4 class="card-title text-light fw-normal fs-2">Planting Trees </h4>
+          </div>
+          <p class="card-text fs-5 p-2 text-start"> As the saying goes, "Plant a tree a day, keeps the erosion away."
+            Let's unite together and each plant a tree to save our Earth!
+            <br> <br>
+            Click the button to learn more:
+          </p>
+          <a href="#plantTree" class="d-inline btn btn-info w-50 mb-2 mx-2 fw-bold">Go to Plant Trees</a>
+        </div>
+      </div>
+
+      <!-- Cards for Educate Others -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card mx-auto mb-5 w-75">
+          <img class="card-img img-fluid" src="../graphics_files/stesection3.jpg" alt="Educate">
+          <div class="card-img-overlay h-50">
+            <h4 class="card-title text-light fw-normal fs-2"> Educate Others </h4>
+          </div>
+          <p class="card-text fs-5 p-2 text-start"> Let's educate as much people as possible about our Earth and ways to
+            save it! Leading to a sustainabile future for us.
+            <br> <br>
+            Click the button to learn more:
+          </p>
+          <a href="#Educate" class="d-inline btn btn-info w-50 mb-2 mx-2 fw-bold">Go to Educate</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 3 Ways to Save The Earth-->
+  <div class="headingstyle my-5 display-1 text-center">
+    How to Save The Earth? </div>
+
+
+
+  <!-- Article for 3 Personal Goals -->
+  <div class="howto w-100 p-5 my-5 container-fluid">
+    <h2 class="fw-bolder text-light text-break fs-2 py-5 text-center"> 1. Reduce, Reuse, Recycle.</h2>
+  </div>
+
+
+  <!-- Recycle, Reduce, Reuse -->
+  <div id="3R" class="steArticle container">
+    <div class="row steArticletext p-5">
+      <div
+        class="d-flex align-items-center justify-content-center text-lg-start text-sm-center display-4 mb-5 col-lg-4 col-md-12">
+        <p> REUSE THE PAST, RECYCLE THE PRESENT, SAVE THE FUTURE</p>
+      </div>
+
+      <div class="col-lg-8 col-md-12">
+        <div class="row">
+          <div class="article col-md-6 col-sm-12">
+            <p class="fs-4">
+              Instead of throwing away waste causing pile of garbage surrounding our Earth. On the contrary, we should
+              follow the three "R's" to reduce landfill area and make our planet a cleaner environment.
+              <br><br>
+              By <strong>reducing</strong>, we reduce the trash produced in our daily lives, such as utilizing your own
+              bag rather than a single-use plastic bag.
+              <br><br>
+              By <strong>reusing</strong>, we ensure that we utilize an item more than once, for example, using a bag at
+              least a few times before discarding it.
+              <br><br>
+              By <strong>recycling</strong>, we ensure that our product is reused rather than discarded.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+
+            <!-- Image for large and medium devices -->
+            <div class="steArticleImage d-none d-md-block position-relative h-100">
+              <img class="img-fluid position-absolute top-50 start-50 translate-middle rounded"
+                src="../graphics_files/stfarticle3R.jpeg" alt="Recycle, Reduce, Reuse">
+
+            </div>
+            <!-- Image for small devices -->
+            <div class="d-sm-block d-md-none my-5">
+              <img class="img-fluid rounded" src="../graphics_files/stfarticle3R.jpeg" alt="Recycle, Reduce, Reuse">
+
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="howto w-100 p-5 my-5 container-fluid">
+    <h2 class="fw-bolder text-light text-break fs-2 py-5  text-center"> 2. Planting Trees. </h2>
+  </div>
+
+  <!-- Plant Trees -->
+  <div id="plantTree" class="steArticle container">
+    <div class="row steArticletext p-5">
+
+      <div
+        class="d-flex align-items-center justify-content-center text-lg-start text-sm-center display-4 mb-5 col-lg-4 col-md-12">
+        <p> HE WHO PLANTS A TREE PLANTS A HOPE </p>
+      </div>
+
+      <div class="col-lg-8 col-md-12">
+        <div class=" row">
+          <div class="article col-md-6 col-sm-12">
+            <p class="fs-4">
+              Planting <strong>trees and plants</strong> has numerous environmental benefits. It goes through
+              photosynthesis, which reduces carbon dioxide in the air and releases oxygen. Thus, it decreases
+              greenhouse gases, resulting in less global warming.
+              <br><br>
+              They also prevent soil erosion and help maintain cooler temperatures by providing shade. Trees and
+              plants additionally provide food for us and the animals, ensuring the stability of the environment.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+
+            <!-- Image for large and medium devices -->
+            <div class="steArticleImage d-none d-md-block position-relative h-100">
+              <img class="imgTrees img-fluid position-absolute top-50 start-50 translate-middle rounded"
+                src="../graphics_files/stfarticlePlantTree.jpg" alt="Planting Trees">
+              <!-- Source: https://dakotavalleyrecyclingmn.gov/other-residential-recycling/356-what-you-can-do-at-home-to-reduce-reuse-and-recycle from Dakota Valley Recycling-->
+
+            </div>
+            <!-- Image for small devices -->
+            <div class="d-sm-block d-md-none my-5 text-center">
+              <img class="imgTrees img-fluid rounded" src="../graphics_files/stfarticlePlantTree.jpg"
+                alt="Planting Trees">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="howto w-100 p-5 my-5 container-fluid">
+    <h2 class="fw-bolder text-light text-break fs-2 py-5 text-center"> 3. Educate Others. </h2>
+  </div>
+
+  <!-- Educate Others -->
+  <div id="Educate" class="steArticle container">
+    <div class="row steArticletext p-5">
+
+      <div
+        class="d-flex align-items-center justify-content-center text-lg-start text-sm-center display-4 mb-5 col-lg-4 col-md-12">
+        <p> TEACH, LOVE, INSPIRE </p>
+      </div>
+
+      <div class="col-lg-8 col-md-12">
+        <div class=" row">
+          <div class=" article col-md-6 col-sm-12">
+            <p class="fs-4">
+              By <strong>informing and educating</strong> others on environmental issues and the risks and
+              threats that our planet is currently facing,
+              we can ensure that they participate in the conservation of the environment or even spread the
+              message to others.
+              <br><br>
+              This enables more actions to be carried out, and as the phrase goes, <i>'two hands are better than
+                one'.</i>
+              It protects the Earth from deteriorating and ensures that it can recover from human harmful
+              actions.
+            </p>
+          </div>
+
+          <div class="col-md-6 col-sm-12">
+
+            <!-- Image for large and medium devices -->
+            <div class="steArticleImage d-none d-md-block position-relative h-100">
+              <img class="img-fluid position-absolute top-50 start-50 translate-middle rounded"
+                src="../graphics_files/stfarticleEducation.jpg" alt="Planting Trees">
+
+            </div>
+            <!-- Image for small devices -->
+            <div class="d-sm-block d-md-none my-5">
+              <img class="img-fluid rounded" src="../graphics_files/stfarticleEducation.jpg" alt="Planting Trees">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Footer -->
+  <div id="footer" class="mt-5 pt-5">
+    <div class="container mt-5">
+      <footer class="row border-top mt-5 py-5 text-white">
+
+        <div class="col-lg-3 col-md-4 mb-5">
+          <img class="img-fluid" src="../graphics_files/logo.png" alt="logo">
+          <br>
+          <div class="mt-2">
+
+            IVAN TAY YUEN HENG 2335133
+
+          </div>
+        </div>
+
+        <div class="d-none d-lg-block col-lg-3">
+
+        </div>
+
+        <div class="col-lg-3 col-md-4 mb-5">
+          <h5 class="fs-4 mb-4"><img class="imgsplogo img-fluid rounded-circle" src="../graphics_files/sgpolylogo.jpg"
+              alt="sgpolylogo"> Singapore Poly </h5>
+          <ul>
+            <li class="fs-5 mb-2"><a class="text-white text-decoration-none" href="https://www.sp.edu.sg/">
+                Website </a></li>
+            <!-- Link to Singapore Polytechnic Main Website-->
+            <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                href="https://www.sp.edu.sg/sp/about-sp/why-sp/sustainability-matters"> Sustanability
+                Website </a></li>
+            <!-- Link to Singapore Polytechnic Sustainability website which is located in Singapore Polytechnnic Website-->
+            <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                href="https://www.sp.edu.sg/sp/about-sp/contact-us"> Contact Them </a></li>
+            <!-- Link to Contact List in Singapore Polytechnic website which is located in Singapore Polytechnic Website-->
+          </ul>
+        </div>
+
+
+        <div class="col-lg-3 col-md-4">
+          <h5 class="fs-4 mb-4"><img class="imgsplogo img-fluid rounded-circle" src="../graphics_files/stelogo.jpg"
+              alt="stelogo"> Save The Earth </h5>
+          <ul>
+            <li class="fs-5 mb-2"><a class="text-white text-decoration-none" href="https://www.greenplan.gov.sg/">
+                Singapore Green Plan 2030 </a></li>
+            <!-- Link to Singapore Green Plan Website-->
+            <li class="fs-5 mb-2"><a class="text-white text-decoration-none"
+                href="https://oceanservice.noaa.gov/ocean/earthday.html"> Protect Our Planet </a></li>
+            <!-- Link to National Ocean Service Website (Ten Simple choices for a healthier planet) -->
+            <li class="fs-5 mb-2"><a class="text-white text-decoration-none" href="https://www.cgs.gov.sg/">
+                Clean & Green </a></li>
+            <!-- Link to Clean and Green Singapore -->
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+</body>
+
+</html>
+
+<!-- End of Page -->
